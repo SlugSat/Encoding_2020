@@ -60,37 +60,37 @@ u_int32_t G = 0;
       case 4:
         *n = 7;
         *d = 3;
-         G = 13; 
+         G = 013; 
         break;
   
       case 11:
         *n = 15;
         *d = 3;
-         G = 23; 
+         G = 023; 
         break;
 
       case 7:
         *n = 15;
         *d = 5;
-         G = 721; 
+         G = 0721; 
         break;
 
       case 26:
         *n = 31;
         *d = 3;
-         G = 45; 
+         G = 045; 
         break;
 
       case 21:
         *n = 31;
         *d = 5;
-         G = 3551; 
+         G = 03551; 
         break;  
 
       case 16:
         *n = 31;
         *d = 7;
-         G = 107657; 
+         G = 0107657; 
         break;        
 
     return G;

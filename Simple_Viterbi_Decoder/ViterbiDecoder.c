@@ -3,26 +3,65 @@
 #include <ctype.h>
 #include <unistd.h> 
 
+struc node
+{
+  int weight;
+  int bit;
+  struct node *one;
+  struct node *zero;
+  struct node *parent;
+};
 
 int intro(int *n, int *k, int d, int argc, char *argv[]);
+struct node* NodeInit(int weight);
+
 
 int main(int argc, char *argv[])
 {
 
-
-
-
-
-
-
-
-
-
-
+struct node * head = NodeInit(0);
 
 
 
     return 0;
+}
+
+int Decode_Tree(node* branch,int states,int bit){
+
+  branch->one = NodeInit(0);
+  branch->zero = NodeInit(0);
+
+  branch->one->parent = branch;
+  branch->zero->parent = branch;
+
+  int z = Decode_Tree(branch->one,states,bit-1,bit+states);
+  int o = Decode_Tree(branch->zero,states,bit-1,bit+states);
+
+   int confidence = 0;
+
+  if (z > o){
+    temp->bit = 0;
+    confidence = z;
+  }else{
+    temp->bit = 1;
+    confidence = o;
+  }
+  
+  return confidence;
+
+}
+
+struct node* NodeInit(int weight){
+
+  struct node* temp = (struct node*)malloc(sizeof(struct node));
+
+  temp->weight = weight;
+  temp->bit    = NULL;
+  temp->one    = NULL;
+  temp->zero   = NULL;
+  temp->parent = NULL;
+
+  return temp;
 }
 
 int intro(int *n, int *k, int d, int argc, char *argv[]){
