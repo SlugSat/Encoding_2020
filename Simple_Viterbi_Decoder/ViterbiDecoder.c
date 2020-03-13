@@ -21,6 +21,14 @@ int main(int argc, char *argv[])
 
 struct node * head = NodeInit(0);
 
+u_int32_t n = 0; //Input Integer
+u_int32_t k = 0; //Registers/States
+u_int32_t d = 0;
+
+intro(&n,&k,d,argc,argv); //Process Arguments
+
+printf("Total number of registers is %d \n", (n-k));
+
 
 
     return 0;
@@ -72,7 +80,7 @@ int intro(int *n, int *k, int d, int argc, char *argv[]){
   char *Value = NULL;
   opterr = 0;
 
-   while ((c = getopt (argc, argv, "hn:k:d:")) != -1)
+   while ((c = getopt (argc, argv, "n:k:d:")) != -1)
     switch (c)
       {
       case 'n':
