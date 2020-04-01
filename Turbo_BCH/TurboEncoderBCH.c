@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
 {
 
 u_int32_t test = getchar();
+
+
+test = atoi(test);
 printf("Recieved is %d\n",test);
 test = inter_leaver(test);
 printf("Output is %d\n",test);
