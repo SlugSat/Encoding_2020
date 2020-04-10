@@ -10,29 +10,30 @@
 #include <unistd.h> 
 #include "interleaver.h"
 
-
-int intro(int *n, int *k, int d, int argc, char *argv[]);
+int intro(int *n, int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
+  int n;
+  printf("Run command ./Test -h      # For help\n");
+  int action = intro(int *n, int argc, char *argv[]);
 
-  u_int32_t n = 0; //Input Integer
-  u_int32_t k = 0; //Registers/States
-  u_int32_t d = 0;
+  switch(action){
 
-  intro(&n, &k, d, argc, argv); //Process Arguments
+      case 1:
+        break;
+        
+      case 2:
+        break;
 
-
-u_int32_t test = n;
-printf("Recieved is %d\n",test);
-test = inter_leaver(test);
-printf("Output is %d\n",test);
-test = de_inter_leaver(test);
-printf("---------Input Num is %d\n",test);
+      case 3:
+        break; 
+  }
 
 }
 
-int intro(int *n, int *k, int d, int argc, char *argv[])
+
+int intro(int *n, int argc, char *argv[])
 {
 
   int c;
@@ -44,7 +45,7 @@ int intro(int *n, int *k, int d, int argc, char *argv[])
   while ((c = getopt(argc, argv, "hn:k:d:")) != -1)
     switch (c)
     {
-    case 'n':
+    case 'a':
       if (isdigit(*optarg) != 0)
       {
         *n = atoi(optarg);
@@ -57,7 +58,7 @@ int intro(int *n, int *k, int d, int argc, char *argv[])
         Error++;
       }
       break;
-    case 'k':
+    case 'b':
       if (isdigit(*optarg) != 0)
       {
         *k = atoi(optarg);
@@ -70,7 +71,7 @@ int intro(int *n, int *k, int d, int argc, char *argv[])
         Error++;
       }
       break;
-    case 'd':
+    case 'c':
       if (isdigit(*optarg) != 0)
       {
         d = atoi(optarg);
@@ -110,4 +111,3 @@ int intro(int *n, int *k, int d, int argc, char *argv[])
     exit(1);
   }
 }
-
