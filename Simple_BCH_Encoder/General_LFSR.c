@@ -13,11 +13,11 @@
 #include <unistd.h> 
 
 int main(int argc, char *argv[]){
-    u_int32_t inits = 03551 //In C 0 signifies an octal number
+    u_int32_t inits = 03551; //In C 0 signifies an octal number
                             //The octal number specifies the desired 
                             //LSFR structure.
-    u_int32_t input_bits = 69420; // data bits for LFSR
-    u_int8_t repetitions = 5;// Connected to the number of registers in 
+    u_int32_t input_bits = 1287565; // data bits for LFSR
+    u_int8_t repetitions = 32;// Connected to the number of registers in 
                             //The LFSR structure
     u_int32_t parity_bits = 0;//Container for parity bit
 
@@ -25,7 +25,8 @@ int main(int argc, char *argv[]){
 
         u_int8_t parity_bit = 0b1 & input_bits;
         parity_bits = parity_bits + (parity_bit << x);
-        u_int32_t mask = ~(parity_bit) + 1;     //Performs 2's complement
+        u_int32_t mask = (~(parity_bit) + 1) & inits;     //Performs 2's complement
+        printf("Input %d Mask %d\n",input_bits,mask);
         input_bits = (input_bits >> 1) ^ mask;   //Gets next state of LFSR 
     }
 
