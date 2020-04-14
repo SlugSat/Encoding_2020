@@ -1,6 +1,6 @@
 // By Christopher S. Calderon
 // Start: 4/12/2020
-// End:
+// End: 4/13/2020
 // Purpose: The purpose of this code is too act as a general LFSR
 // to test out BCH combinations. Program should take in octal numbers
 // then construct the appropriate structure for BCH. 
