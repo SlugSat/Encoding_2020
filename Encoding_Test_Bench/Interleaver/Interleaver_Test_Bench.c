@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
 
 
     int works = 0;
-    works = BlockInterleaver(1000);
+    works = BlockInterleaver(1150986922);
     if(works) printf("It  works!!!!!!!!!!!!!!!!!!!!\n");
     else printf("Try again :(  \n");
 
