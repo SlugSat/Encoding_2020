@@ -1,12 +1,3 @@
-////////////////////////////////////////////////
-// By Christopher S. Calderon
-//
-//
-//
-////////////////////////////////////////////////
-
-#include <stdlib.h>
-#include <stdio.h>
 
 u_int32_t inter_leaver(u_int32_t input){
 
@@ -27,24 +18,18 @@ u_int32_t inter_leaver(u_int32_t input){
         for (int x = 0; x < 8; x++)
         {
         int position = (1 <<  x );
-        int offset = (4*x)-x;
-
-        printf("position set to: %d Offset: %d\n",position,offset);
-
-        output = output + ((number[0] & position) << (offset));   // 7| 6| 5| 4| 3| 2| 1| 0| 
-        printf("Iteration %d  %d Bit %d Number: %d\n",x,output,(offset),number[0]);
-
-        output = output + ((number[1] & position) << (offset +1));//15|14|13|12|11|10| 9| 8|
-        printf("Iteration %d  %d Bit %d Number: %d\n",x,output,(offset  +1),number[1]);
-
-        output = output + ((number[2] & position) << (offset +2));//23|22|21|20|19|18|17|16|
-        printf("Iteration %d  %d Bit %d Number: %d\n",x,output,(offset  +2),number[2]);
-
-        output = output + ((number[3] & position) << (offset +3)); //31|30|29|28|27|26|25|24|
-        printf("Iteration %d  %d Bit %d Number: %d\n",x,output,(offset  +3),number[3]);
+        int num_offset = 4*x;
+        output = output + ((number[0] & position) << (num_offset-x));   // 7| 6| 5| 4| 3| 2| 1| 0| 
+        //printf("Itteration %d  %d Bit %d\n",x,output,(num_offset));
+        output = output + ((number[1] & position) << (num_offset-x));   //15|14|13|12|11|10| 9| 8|
+        //printf("Itteration %d  %d Bit %d\n",x,output,(num_offset + 1));
+        output = output + ((number[2] & position) << (num_offset-x));   //23|22|21|20|19|18|17|16|
+        //printf("Itteration %d  %d Bit %d\n",x,output,(num_offset + 2));
+        output = output + ((number[3] & position) << (num_offset-x));   //31|30|29|28|27|26|25|24|
+        //printf("Itteration %d  %d Bit %d\n",x,output,(num_offset + 3));
 
         }
-         printf("Interleaver %d*****************************************************************\n",output);
+         printf("*****************************************************************\n");
                                 //Output                           Int order
     return output;  //Returns 31|23|15| 7|  30|22|14| 6|      //31|30|29|28|27|26|25|24|
                     //        29|21|13| 5|  28|20|12| 4|      //23|22|21|20|19|18|17|16|
