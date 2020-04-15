@@ -9,18 +9,31 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <unistd.h> 
+#include <time.h>
 #include "interleaver.h"
 
 int BlockInterleaver(u_int32_t input);
 
 int main(int argc, char *argv[]){
 
-
+    u_int32_t Random_Trials = 4294967295;
+    u_int32_t x = 0;
     int works = 0;
-    works = BlockInterleaver(1150986922);
-    if(works) printf("It  works!!!!!!!!!!!!!!!!!!!!\n");
-    else printf("Try again :(  \n");
+    int fails = 0;
+    int success = 0;
 
+    //srand((unsigned) time(NULL));
+
+    while(x < Random_Trials){
+    //int num = rand() % 65535;
+    //num = num | ((rand() % 65535) << 16);
+    works = BlockInterleaver(x);
+    if(works) success++;
+    else fails++;
+    x++;
+    if((x%1000000)== 0) printf("Success: %d  Failure: %d\n",success,fails);
+    }
+    printf("Success: %d  Failure: %d",success,fails);
 }
 
 int BlockInterleaver(u_int32_t input){
