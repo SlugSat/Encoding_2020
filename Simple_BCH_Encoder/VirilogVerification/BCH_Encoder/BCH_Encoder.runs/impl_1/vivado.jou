@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Apr 20 19:13:32 2020
+# Process ID: 11972
+# Current directory: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.runs/impl_1
+# Command line: vivado.exe -log BCH_Encoder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source BCH_Encoder.tcl -notrace
+# Log file: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.runs/impl_1/BCH_Encoder.vdi
+# Journal file: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source BCH_Encoder.tcl -notrace

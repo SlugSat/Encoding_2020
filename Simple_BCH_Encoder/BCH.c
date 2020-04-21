@@ -3,8 +3,6 @@
 #include <ctype.h>
 #include <unistd.h> 
 
-
-
 int Get_G(int *n, int *k, int *d);
 int Valid_K(int k);
 
@@ -24,11 +22,6 @@ int registers = n-k;
 
 printf("From your values, n is %d, k is %d, d is %d, g(x) is %d",n,k,d,g);
 printf("This has %d states so %d parity bits will be added\n",registers,registers);
-
-
-
-
-  
 
 return 0;
 }
