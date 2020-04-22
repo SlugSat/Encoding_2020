@@ -17,3 +17,31 @@ source BCH_tb.tcl
 run 10 ms
 relaunch_sim
 run 10 ms
+close [ open C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.srcs/sources_1/new/BCH_Decoder.v w ]
+add_files C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.srcs/sources_1/new/BCH_Decoder.v
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top BCH_Decoder [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+launch_simulation
+launch_simulation
+source BCH_tb.tcl
+run 10 ms
+close_sim
+launch_simulation
+source BCH_tb.tcl
+run 10 ms
+relaunch_sim
+run 10 ms

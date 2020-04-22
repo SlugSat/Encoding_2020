@@ -6,7 +6,7 @@
 CC = gcc 
 CFLAGS = -g -Wall
 
-default: encode
+default: decode
 
 BCH:	BCH.o
 	$(CC) $(CFLAGS) -o BCH BCH.o

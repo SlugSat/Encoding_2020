@@ -26,10 +26,18 @@ module BCH_tb;
     wire [9:0] data_out_struct;
     wire [9:0] data_out_behav;
 
-    integer i, error_struct, error_behav;
-    integer expected_lfsr [0:9];
+    integer i;
+    integer expected_lfsr [31:0];
     
-    BCH_Encoder Test(.clk(clk),
+//    BCH_Encoder Test(.clk(clk),
+//                        .res_n(res_n),
+//                        .data_in(data_in),
+//                        .x(x),
+//                        .data_out(data_out_struct)
+//                        //.bit_out(bit)
+//                        );
+
+BCH_Decoder Test(.clk(clk),
                         .res_n(res_n),
                         .data_in(data_in),
                         .x(x),
@@ -46,12 +54,41 @@ module BCH_tb;
         expected_lfsr[1] = 0;
         expected_lfsr[2] = 1;
         expected_lfsr[3] = 0;
+        
         expected_lfsr[4] = 0;
         expected_lfsr[5] = 0;
         expected_lfsr[6] = 1;
         expected_lfsr[7] = 0;
+        
         expected_lfsr[8] = 0;
         expected_lfsr[9] = 0;
+        expected_lfsr[10] = 0;
+        expected_lfsr[11] = 0;
+        
+        expected_lfsr[12] = 0;
+        expected_lfsr[13] = 0;
+        expected_lfsr[14] = 0;
+        expected_lfsr[15] = 0;
+        
+        expected_lfsr[16] = 0;
+        expected_lfsr[17] = 0;
+        expected_lfsr[18] = 0;
+        expected_lfsr[19] = 0;
+        
+        expected_lfsr[20] = 0;
+        expected_lfsr[21] = 1;
+        expected_lfsr[22] = 1;
+        expected_lfsr[23] = 0;
+        
+        expected_lfsr[24] = 1;
+        expected_lfsr[25] = 1;
+        expected_lfsr[26] = 1;
+        expected_lfsr[27] = 1;
+        
+        expected_lfsr[28] = 1;
+        expected_lfsr[29] = 0;
+        expected_lfsr[30] = 1;
+        expected_lfsr[31] = 1;
         // Set initial clock, data, and reset
         clk = 'b0;
         x = 'b0;
@@ -65,13 +102,13 @@ module BCH_tb;
         @(posedge clk);
         
         //10 clock cycles
-        for(i = 0; i < 10; i = i+1) begin
+        for(i = 0; i < 32; i = i+1) begin
             @(posedge clk);
             x = expected_lfsr[i];
         end
-        for(i = 0; i < 32; i = i+1) begin
-            @(posedge clk);
-        end
+//        for(i = 0; i < 31; i = i+1) begin
+//            @(posedge clk);
+//        end
         $finish;
     end
     

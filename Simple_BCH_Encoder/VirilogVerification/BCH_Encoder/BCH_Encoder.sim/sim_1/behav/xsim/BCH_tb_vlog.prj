@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../BCH_Encoder.srcs/sources_1/new/BCH_Encoder.v" \
+"../../../../BCH_Encoder.srcs/sources_1/new/BCH_Decoder.v" \
 "../../../../BCH_Encoder.srcs/sim_1/new/BCH_tb.v" \
 
 # compile glbl module
