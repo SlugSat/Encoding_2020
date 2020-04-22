@@ -24,33 +24,34 @@ int main(int argc, char *argv[]){
                             //The LFSR structure
     u_int32_t parity_bits = 0;//Container for parity bit
 
+    inits = inits >> 1; //Shifts Xors in the correct place
+
     for(int x = 0; x < repetitions; x++){
 
         //Compute input value
         u_int8_t parity_bit = 0b1 & input_bits;
+        input_bits = input_bits >> 1;
         u_int32_t outputbit = (parity_bits & 01000) >> 9;
         u_int32_t xor_val = parity_bit ^ outputbit;
         //Get xor mask
-        u_int32_t mask = (~(parity_bit) + 1) & inits;   //Performs 2's complement
+        u_int32_t mask = (~(xor_val) + 1) & inits;   //Performs 2's complement
         parity_bits = (parity_bits ^ mask) << 1;        //Apply xor mask
         parity_bits = parity_bits + xor_val;            //Shift in input bit
+        parity_bits = parity_bits & 01777;  //Show only ten bits
         print_binary(parity_bits);
         printf(" Input %d Mask %d Register state %d\n",xor_val,mask,parity_bits);
     }
-    
-
     printf("Parity bits are: %d",parity_bits);
 }
 
-
 int print_binary (u_int32_t rg){
 
-    u_int32_t bit = 010000000000; 
+    u_int32_t bit = 01000; 
 
-    for(int x = 0; x < 31;x++){00
+    for(int x = 0; x < 10;x++){
 
-    if(bit & rg) printf("1");
-    else printf("0");
+        if(bit & rg) printf("1");
+        else printf("0");
     bit = bit >> 1;
 
     }

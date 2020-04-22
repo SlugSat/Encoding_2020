@@ -41,7 +41,7 @@ always @(posedge clk) begin
         SR[6] <= SR[5] ^ SR[9] ^ x; //0
         SR[7] <= SR[6];         //1
         SR[8] <= SR[7] ^ SR[9] ^ x; //1
-        SR[9] <= SR[9] ^ x; //1  
+        SR[9] <= SR[8] ^ SR[9] ^ x; //1  
           
 end
 always @(posedge clk)begin

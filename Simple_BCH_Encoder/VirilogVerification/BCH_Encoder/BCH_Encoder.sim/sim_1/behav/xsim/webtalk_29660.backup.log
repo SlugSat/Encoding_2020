@@ -2,11 +2,13 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Apr 21 23:01:03 2020
-# Process ID: 24156
+# Start of session at: Tue Apr 21 19:12:34 2020
+# Process ID: 29660
 # Current directory: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim/xsim.dir/BCH_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim/xsim.dir/BCH_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Chris/Desktop/Code/Encoding_2020/Simple_BCH_Encoder/VirilogVerification/BCH_Encoder/BCH_Encoder.sim/sim_1/behav/xsim/xsim.dir/BCH_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Apr 21 19:12:36 2020. For additional details about this file, please refer to the WebTalk help file at D:/Programs/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 21 19:12:36 2020...
