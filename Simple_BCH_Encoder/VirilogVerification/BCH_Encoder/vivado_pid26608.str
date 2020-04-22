@@ -540,3 +540,43 @@ selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, "simulation_l
 // TclEventType: WAVEFORM_MODEL_EVENT
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 97 MB. Current time: 4/20/20, 8:08:27 PM PDT
+// Elapsed time: 3303 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCH_Encoder.v", 0); // i (h, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/20/20, 8:38:27 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/20/20, 9:08:27 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1082190 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/20/20, 9:55:13 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/20/20, 10:25:14 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/20/20, 10:55:14 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  7719 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/20/20, 11:25:17 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/20/20, 11:55:17 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1105 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 3:19:45 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 6:36:05 AM PDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1043 ms. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10457650 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 9:46:21 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 10:16:22 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 10:46:22 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 11:16:22 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 11:46:23 AM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1297964 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 12:16:24 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1281 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  9159633 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 3:06:38 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1206 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1263 ms. Increasing delay to 3789 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1099 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 3:36:39 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2755849 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 90 MB. Current time: 4/21/20, 4:36:33 PM PDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2757550 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 5:06:34 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  318371 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 5:36:38 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1530904 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 91 MB. Current time: 4/21/20, 6:17:23 PM PDT
