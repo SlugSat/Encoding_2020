@@ -1,0 +1,10 @@
+////////////////////////////////////////////////
+// By Christopher S. Calderon
+//
+// Started: 4/29/2020
+// Finished:
+//
+// The purpose of this function is to estimate the
+// number of errors that occurred with in a codeword.
+//
+////////////////////////////////////////////////

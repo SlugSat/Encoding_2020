@@ -1,0 +1,11 @@
+////////////////////////////////////////////////
+// By Christopher S. Calderon
+//
+// Started: 4/29/2020
+// Finished:
+//
+////////////////////////////////////////////////
+
+#include "error_poly.c"
+#include "num_errors.c"
+#include "poly_roots.c"
