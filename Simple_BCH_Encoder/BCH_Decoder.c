@@ -15,13 +15,13 @@ int data_recovery(int Syndrom, int inits);
 
 int main(int argc, char *argv[])
 {
-    u_int32_t inits = 03551;           //In C 0 signifies an octal number  11101101001
-                                       //The octal number specifies the desired
-                                       //LSFR structure.
-    u_int32_t input_bits = 1872756805; //1455289;//1287565; // data bits for LFSR
-    u_int8_t repetitions = 31;         // Connected to the number of registers in
-                                       //The LFSR structure
-    u_int32_t parity_bits = 0;         //Container for parity bit
+    u_int32_t inits = 03551;       //In C 0 signifies an octal number  11101101001
+                                   //The octal number specifies the desired
+                                   //LSFR structure.
+    u_int32_t input_bits = 556686; //1455289;//1287565; // data bits for LFSR
+    u_int8_t repetitions = 31;     // Connected to the number of registers in
+                                   //The LFSR structure
+    u_int32_t parity_bits = 0;     //Container for parity bit
 
     inits = inits >> 1; //Shifts Xors in the correct place
 
@@ -64,7 +64,7 @@ int print_binary(u_int32_t rg)
 int data_recovery(int Syndrom, int inits)
 {
 
-    int L = 0;  //Current number of assumed errors
+    int L = 1;  //Current number of assumed errors
     int m = 1;  //the number of iterations since L, B(x), and b were updated and initialized to 1
     int N = 32; //N is the total number of syndromes
     int d = 0;  //discrepancy
@@ -88,12 +88,13 @@ int data_recovery(int Syndrom, int inits)
         parity_bits = parity_bits & 01777;           //Show only ten bits
         S_n[x] = parity_bits;
     }
-
+    u_int32_t d = S_n[31]; // Initial S_n
     for (int n = 0; n < N; n++)
     {
-        u_int32_t d = S_n[0]; // Initial S_n
-        for (int index = 0; index < ; index++)
+
+        for (int index = 0; index < L; index++) //C_i S_(N-1-i)
         {
+            d = d ^ (C_x & S_n)
         }
 
         if (d == 0)
